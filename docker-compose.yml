@@ -4,11 +4,11 @@ services:
     container_name: agentrouter_reverse_proxy
     restart: unless-stopped
     ports:
-      - "28471:28471"
+      - "${PORT:-28471}:${PORT:-28471}"
     environment:
-      - UPSTREAM_URL=https://agentrouter.org
-      - CLINE_USER_AGENT=Cline/4.1.17
-      - STAINLESS_LANG=js
-      - STAINLESS_RUNTIME=node
+      - UPSTREAM_URL=${UPSTREAM_URL:-https://agentrouter.org}
+      - CLINE_USER_AGENT=${CLINE_USER_AGENT:-Cline/4.1.17}
+      - STAINLESS_LANG=${STAINLESS_LANG:-js}
+      - STAINLESS_RUNTIME=${STAINLESS_RUNTIME:-node}
       - HOST=0.0.0.0
-      - PORT=28471
+      - PORT=${PORT:-28471}
