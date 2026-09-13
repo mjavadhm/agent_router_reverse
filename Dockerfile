@@ -11,6 +11,6 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY config.py main.py .env.example ./
 
-EXPOSE 8000
+EXPOSE 28471
 
 CMD ["python", "main.py"]

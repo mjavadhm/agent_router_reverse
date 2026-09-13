@@ -5,7 +5,7 @@ cd /d "%~dp0"
 echo ===================================================
 echo Starting AgentRouter Reverse Proxy (Cline Spoofing)
 echo Target: https://agentrouter.org
-echo Local:  http://127.0.0.1:8000/v1
+echo Local:  http://127.0.0.1:28471/v1
 echo ===================================================
 
 if not exist ".venv\Scripts\python.exe" (

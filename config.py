@@ -9,4 +9,4 @@ STAINLESS_LANG = os.getenv("STAINLESS_LANG", "js")
 STAINLESS_RUNTIME = os.getenv("STAINLESS_RUNTIME", "node")
 
 HOST = os.getenv("HOST", "0.0.0.0")
-PORT = int(os.getenv("PORT", "8000"))
+PORT = int(os.getenv("PORT", "28471"))

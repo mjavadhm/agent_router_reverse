@@ -25,7 +25,7 @@
 ```
 start.bat
 ```
-این اسکریپت محیط مجازی پایتون (`.venv`) را فعال کرده و سرور را روی پورت `8000` بالا می‌آورد.
+این اسکریپت محیط مجازی پایتون (`.venv`) را فعال کرده و سرور را روی پورت `28471` بالا می‌آورد.
 
 ### یا اجرای دستی با ترمینال:
 ```powershell
@@ -33,8 +33,8 @@ start.bat
 ```
 
 پس از اجرا، آدرس پروکسی شما خواهد بود:
-- **Base URL:** `http://127.0.0.1:8000/v1`
-- **Health Check:** `http://127.0.0.1:8000/health`
+- **Base URL:** `http://127.0.0.1:28471/v1`
+- **Health Check:** `http://127.0.0.1:28471/health`
 
 ---
 
@@ -46,7 +46,7 @@ start.bat
 from openai import OpenAI
 
 client = OpenAI(
-    base_url="http://127.0.0.1:8000/v1",
+    base_url="http://127.0.0.1:28471/v1",
     api_key="sk-nJRLolenzlVQAxALe2URP6oqOVr0iXpxBWCDsNnYYw3tWfNz",  # کلید AgentRouter شما
 )
 
@@ -67,7 +67,7 @@ for chunk in response:
 ### ۲. استفاده در Cursor / Continue / VS Code Extensions
 
 در بخش تنظیمات مدل سفارشی (Custom OpenAI Model):
-- **API Base / URL:** `http://127.0.0.1:8000/v1`
+- **API Base / URL:** `http://127.0.0.1:28471/v1`
 - **API Key:** کلید اختصاصی شما از AgentRouter
 - **Model Name:** نام مدل‌های موجود در پنل (مثل `claude-opus-4-8`, `deepseek-v4-flash`, `glm-5.3`, `claude-opus-5`)
 
@@ -76,7 +76,7 @@ for chunk in response:
 ### ۳. تست با cURL
 
 ```bash
-curl -X POST http://127.0.0.1:8000/v1/chat/completions \
+curl -X POST http://127.0.0.1:28471/v1/chat/completions \
   -H "Authorization: Bearer sk-nJRLolenzlVQAxALe2URP6oqOVr0iXpxBWCDsNnYYw3tWfNz" \
   -H "Content-Type: application/json" \
   -d '{
@@ -112,5 +112,5 @@ CLINE_USER_AGENT=Cline/4.1.17
 STAINLESS_LANG=js
 STAINLESS_RUNTIME=node
 HOST=0.0.0.0
-PORT=8000
+PORT=28471
 ```
