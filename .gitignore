@@ -1,0 +1,25 @@
+# Virtual Environment
+.venv/
+venv/
+env/
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environment & Secrets (Keep API keys safe)
+.env
+
+# Test files & temporary scripts (excluded as requested)
+test.py
+test_client.py
+test_*.py
+*_test.py
+*.scad
+
+# IDE & OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

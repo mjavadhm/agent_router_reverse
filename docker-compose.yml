@@ -1,0 +1,14 @@
+services:
+  agentrouter-proxy:
+    build: .
+    container_name: agentrouter_reverse_proxy
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    environment:
+      - UPSTREAM_URL=https://agentrouter.org
+      - CLINE_USER_AGENT=Cline/4.1.17
+      - STAINLESS_LANG=js
+      - STAINLESS_RUNTIME=node
+      - HOST=0.0.0.0
+      - PORT=8000
